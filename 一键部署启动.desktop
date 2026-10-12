@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=一键部署启动 bot
+Comment=自动准备运行环境并启动管理后台
+Exec=sh -c "exec sh \\"\\$(dirname \\"\\$1\\")/一键部署启动.sh\\"" sh %k
+Icon=utilities-terminal
+Terminal=true
+Categories=Utility;

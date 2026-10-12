@@ -1,0 +1,19 @@
+{
+  "name": "bot-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "qrcode": "^1.5.4",
+    "undici": "^6.28.0",
+    "ws": "^8.18.0"
+  }
+}
