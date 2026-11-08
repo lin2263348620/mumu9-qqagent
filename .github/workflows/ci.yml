@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: test (windows, node 22)
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: qq-agent
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: qq-agent/package-lock.json
+      - name: Install production dependencies
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Run tests
+        run: npm test
+
+  hygiene:
+    name: repository hygiene
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Required public files
+        run: |
+          set -e
+          for f in README.md LICENSE THIRD_PARTY_NOTICES.md qq-agent/LICENSE; do
+            if [ ! -f "$f" ]; then echo "missing: $f"; exit 1; fi
+          done
+      - name: No private artifacts committed
+        run: |
+          set -e
+          if git ls-files | grep -Ei '(^|/)\.env$|(^|/)data/|(^|/)node_modules/|(^|/)\.runtime/|admin-password'; then
+            echo "private artifact is tracked"; exit 1
+          fi
