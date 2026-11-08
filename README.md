@@ -1,4 +1,7 @@
 # bot-admin
+[![CI](https://github.com/lin2263348620/mumu9-qqagent/actions/workflows/ci.yml/badge.svg)](https://github.com/lin2263348620/mumu9-qqagent/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 
 > 原项目作者：**Kondius**，Bilibili 主页：[Kondius](https://space.bilibili.com/14464411)。本项目基于其原项目进行了大幅修改与扩展，是独立维护的衍生版本，并非原作者的官方发行版。感谢原作者提供的项目基础；原项目及第三方代码的版权与许可声明予以保留。
 
