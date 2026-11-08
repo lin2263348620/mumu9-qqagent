@@ -1,0 +1,69 @@
+name: Bug report
+description: 报告一个可复现的问题
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提交前请先看 docs/TROUBLESHOOTING.md。
+        **不要粘贴**：API 密钥、管理密码、data/ 内容、QQ 登录二维码、聊天记录。
+  - type: dropdown
+    id: package
+    attributes:
+      label: 使用的发行物
+      options:
+        - Windows 离线整合包
+        - 源码运行
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 版本
+      description: Release 标签或提交号
+      placeholder: v1.0.0
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows 版本
+      placeholder: Windows 11 23H2 x64
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 解压到 D:\bot
+        2. 双击 一键部署启动.cmd
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 相关日志（已脱敏）
+      description: 请先删除密钥、账号、聊天内容
+      render: text
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 我已确认日志与截图不含密钥、账号或聊天记录
+          required: true
