@@ -1,0 +1,51 @@
+MIT License
+
+Copyright (c) 2026 lin2263348620 (mumu9-qqagent)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Scope and third-party components
+
+This MIT license covers the code, deployment scripts, and documentation created
+for this project, including the Windows one-click deployment entry points, the
+admin gateway, the admin UI integration, and the documentation in `docs/`.
+
+It does **not** relicense third-party components:
+
+1. Original QQ Agent code - MIT, Copyright (c) 2026 白光 (liuyuyu599com-svg).
+   Full text: `qq-agent/LICENSE`. This project is an independently maintained
+derivative and is not an official release of the original author.
+2. React Bits components - GradientText, Dock, ThoughtLine, ProfileCard,
+   TargetCursor, JellyRadio, SoftAurora, LightPillar, SquishSwitch.
+   MIT + Commons Clause License Condition v1.0, Copyright (c) 2026 David Haz.
+   They are integrated into this application, not offered as a standalone
+component library. Full text: `THIRD_PARTY_NOTICES.md`.
+3. NapCat, Node.js, and Microsoft Visual C++ runtime - downloaded from their
+   upstream projects at deployment time and remain under their own licenses and
+terms of service. They are not redistributed as binaries by this source
+repository.
+
+See `THIRD_PARTY_NOTICES.md` for the complete set of included notices.
+
+## 非官方声明
+
+本项目为非官方工具，与腾讯 QQ、NapCat 及其维护者均无隶属或官方支持关系。
+不提供验证绕过，不保证账号免于风控。使用者需自行遵守相关服务条款。
