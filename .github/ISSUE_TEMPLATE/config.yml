@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 部署与排障文档
+    url: https://github.com/lin2263348620/mumu9-qqagent/blob/main/README.md
+    about: 先按 README 的常见问题排查，能解决大部分部署与连接问题
+  - name: 安全问题私下报告
+    url: https://github.com/lin2263348620/mumu9-qqagent/security/advisories/new
+    about: 不要用公开 Issue 报告安全问题
